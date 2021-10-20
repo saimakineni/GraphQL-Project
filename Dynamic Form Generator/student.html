@@ -1,0 +1,42 @@
+
+        <html>
+            <header>
+                <title>Class Registration Page</title>
+                <script src="student.js"></script>
+            </header>
+            <body>
+                <h3>Class Registration Page</h3><br/>
+        
+                <label>Student Number:</label>
+                <input name= "sno" size= "9" maxlength="9" type = "number" />
+                <br/><br/>
+                <label>First Name:</label>
+                <input name= "firstname" size= "20" maxlength="50" type = "text" />
+                <br/><br/>
+                <label>Last Name:</label>
+                <input name= "lastname" size= "20" maxlength="50" type = "text" />
+                <br/><br/>
+                
+                <label>Check classes you are enrolled in:</label><br/>
+                <input type="checkbox" value="2310" name="courses"  checked>CSc 2310</input><br/>
+                <input type="checkbox" value="4710" name="courses">CSc 4710</input><br/>
+                <input type="checkbox" value="8710" name="courses">CSc 8710</input><br/>
+                <br/>
+
+                <label>What is your residence status?</label><br/>
+                <select name="status">
+                    <option value="on">On-Campus</option>
+                    <option value="off">Off-Campus</option>
+                </select><br/>
+                <br/>
+
+                <label>Choose a semester:</label><br/>
+                <input type="radio" value="spring" name="semester" >Spring</input><br/>
+                <input type="radio" value="summer" name="semester" >Summer</input><br/>
+                <input type="radio" value="fall" name="semester" >Fall</input><br/>
+                <br/>
+
+                <button onclick="myFunction()" name="submit">Send to database</button> 
+                <button onclick="reload()" name="reset">Clear all fields</button>
+            </body>
+        </html>

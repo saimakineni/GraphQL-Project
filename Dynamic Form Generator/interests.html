@@ -1,0 +1,43 @@
+
+        <html>
+            <header>
+                <title>Student Interests Page</title>
+                <script src="interests.js"></script>
+            </header>
+            <body>
+                <h3>Student Interests Page</h3><br/>
+        
+                <label>Student ID:</label>
+                <input name= "sid" size= "4" maxlength="4" type = "number" />
+                <br/><br/>
+                <label>Student Name:</label>
+                <input name= "sname" size= "20" maxlength="50" type = "text" />
+                <br/><br/>
+                
+                <label>Check programming languages you are interested in.</label><br/>
+                <input type="checkbox" value="java" name="pls">Java</input><br/>
+                <input type="checkbox" value="cplusplus" name="pls">C++</input><br/>
+                <input type="checkbox" value="pascal" name="pls">Pascal</input><br/>
+                <br/>
+
+                <label>What is your degree?</label><br/>
+                <select name="degree">
+                    <option value="ms">M.S.</option>
+                    <option value="phd">Ph.D.</option>
+                </select><br/>
+                <br/>
+
+                <label>What are your hobbies (choose as many as relevant)?</label><br/>
+                <select name="hobbies" size="3" multiple>
+                    <option value="stamp_collection">Stamp Collection</option>
+                    <option value="coin_collection">Coin Collection</option>
+                    <option value="reading">Reading</option>
+                    <option value="crossword_puzzles">Crossword Puzzles</option>
+                    <option value="painting">Painting</option>
+                    <option value="screen_printing">Screen Printing</option>
+                </select><br/>
+                <br/>
+
+                <button onclick="myFunction()" name="submit">Submit Data</button>
+            </body>
+        </html>
