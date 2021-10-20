@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src = "jquery-3.4.1.min.js"> </script>
+<script src="../query.js"></script>
+<style>
+	table, th, td {
+		border: 1px solid rgb(27, 3, 3);
+		border-collapse: collapse;
+	}
+</style>
+<body>
+
+<div ng-app="myApp" ng-controller="myController">
+	<h2>QBE</h2>
+	<pre>        User                    Password                Database</pre>
+	<p>MySQL: <input type="text" ng-model="userName"> <input type="password" ng-model="password"> <input type="text" ng-model="database"> <button ng-click = "getTables()">GO</button></p>
+	
+	<hr size=1em color = gray>
+	
+	<h2>Database Tables</h2>
+	<div ng-show="IsVisible">
+		<table id='databaseTables'>
+			<tr ng-repeat="x in tableList">
+				<td>{{x.tableNames}}</td>
+				<td><select name='requiredSkletons' id='skeletons'>
+						<option value = '0' selected >0</option>
+						<option value = '1'>1</option>
+						<option value = '2'>2</option>
+					</select>
+				</td>
+			</tr>
+		</table><br>
+		<button ng-click="readTables()">Get Skeletons</button> <button ng-click="resetSkeletons()">Reset Skeletons</button>
+	</div>
+	<hr size=1em color = gray>
+
+	<div id = 'qbeInterface'>
+		<h2>QBE Interface</h2>
+		<div id = 'qbeInterfacechilds'>
+		</div>
+	</div>
+	<div ng-show = 'isConBoxVisible'>
+		<p>Condition Box:</p> <input id = 'conBox' ng-model = "conditions">
+		<button ng-click="runQuery()">Run Query</button>
+	</div>
+	<hr size=1em color = gray>
+	<div id = 'result'>
+		<h2>Result</h2>
+		<div id="resultchildren">
+
+		</div>
+	</div>
+	
+</div>
+
+
+
+
+</body>
+</html>
